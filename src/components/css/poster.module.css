@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Sixtyfour&display=swap");
+#container {
+  background-size: cover;
+  font-family: "Sixtyfour", sans-serif;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 300px;
+  font-size: 2rem;
+}

@@ -1,0 +1,189 @@
+@import '../../styles/variables.scss';
+
+$primaryImageWidth: 200px;
+$primaryImageHeight: 200px;
+$asideWidth: 30%;
+
+.warningContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: $background-secondary-color;
+    opacity: 0.9;
+
+    display: grid;
+    place-items: center;
+
+
+    .warning {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        background: $background-primary-color;
+        padding: 14px 16px;
+        border-radius: 10px;
+        width: 200px;
+
+        h2 {
+            text-align: center;
+        }
+
+        &Buttons {
+            display: flex;
+            gap: 8px;
+
+            button {
+                padding: 4px 10px;
+                flex-grow: 1;
+
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: $asideWidth;
+    background-color: $background-primary-color;
+
+    position: relative;
+
+    .imageWrapper {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        padding: 40px 0;
+
+        img {
+            width: $primaryImageWidth;
+            height: $primaryImageHeight;
+        }
+
+
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0 10%;
+    }
+
+    .login {
+        display: grid;
+        place-items: center;
+        height: 100%;
+    }
+
+    button {
+        margin: auto 14%;
+        border: none;
+        padding: 10px 44px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 848px) {
+    aside {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: $background-primary-color;
+        margin-top: 28px;
+
+        .imageWrapper {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            padding: 40px 0;
+
+            img {
+                width: $primaryImageWidth;
+                height: $primaryImageHeight;
+            }
+        }
+
+        .user {
+            display: flex;
+            flex-direction: column;
+            margin: 0 5%;
+            justify-content: center;
+        }
+
+        .login {
+            display: grid;
+            place-items: center;
+            height: 100%;
+        }
+
+        button {
+            margin: auto 4%;
+            border: none;
+            padding: 10px 44px;
+        }
+    }
+}
+
+@media only screen and (max-width: 612px) {
+    aside {
+        height: 400px;
+
+        button {
+            position: absolute;
+            bottom: 14px;
+            right: 34%;
+
+        }
+    }
+
+    .imageWrapper {
+        padding: 0;
+    }
+
+    .warningContainer {
+
+        .warning {
+
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .text {
+                font-size: 16px;
+            }
+
+            &Buttons {
+                button {
+                    padding: 5px 11px;
+                    font-size: 18px;
+                }
+            }
+
+        }
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    aside {
+        height: 450px;
+        flex-direction: column;
+
+        button {
+            right: 28%;
+        }
+    }
+
+    .imageWrapper {
+        padding: 0;
+    }
+
+}

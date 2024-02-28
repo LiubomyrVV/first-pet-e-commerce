@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 25%;
+    background-color: $background-primary-color;
+
+    h2 {
+        text-align: center;
+        padding-top: 12px;
+    }
+
+    a {
+
+        font-size: 14px;
+    }
+
+}
+
+.categories {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 24px;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 14px;
+    margin-top: auto;
+}
+
+.active {
+    color: yellow;
+}
+
+@media only screen and (max-width: 765px) {
+    .container {
+        margin-top: 28px;
+        font-size: 28px;
+    }
+
+    ul>li {
+        text-align: center;
+        font-size: 18px;
+    }
+
+
+}

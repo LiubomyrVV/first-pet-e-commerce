@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 290px;
+    min-height: 220px;
+
+    margin: 14px 12px 26px;
+    padding: 4px 4px 12px;
+
+
+    border-radius: $borderRadius-primary;
+    background-color: $background-secondary-color;
+
+    a {
+        min-width: 80%;
+        display: grid;
+        place-items: center;
+
+        img {
+
+            user-select: none;
+            pointer-events: none;
+            border-radius: 10px;
+            width: 200px;
+
+            height: 200px;
+            margin: 14px 0;
+        }
+    }
+
+    h4 {
+        user-select: none;
+        overflow-wrap: break-word;
+        margin-bottom: 16px;
+    }
+
+    .price {
+
+        margin: auto 0;
+    }
+}

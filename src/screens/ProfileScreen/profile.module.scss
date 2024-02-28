@@ -1,0 +1,366 @@
+@import '../../styles/variables.scss';
+
+$primaryImageWidth: 200px;
+$primaryImageHeight: 200px;
+$asideWidth: 30%;
+
+.warningContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: rgba(50, 32, 58, 0.185);
+
+    display: grid;
+    place-items: center;
+
+    .warning {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        background: $background-primary-color;
+        padding: 14px 16px;
+        border-radius: 10px;
+
+        .title {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        &Buttons {
+            display: flex;
+            gap: 8px;
+
+            button {
+                padding: 4px 10px;
+                border: none;
+                flex-grow: 1;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    gap: 24px;
+    background-color: $background-basic-color;
+    margin-top: 28px;
+    height: 530px;
+    width: 100%;
+
+    aside {
+        width: $asideWidth;
+        background-color: $background-primary-color;
+
+        .imageWrapper {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            padding: 40px 0;
+
+            img {
+                width: $primaryImageWidth;
+                height: $primaryImageHeight;
+            }
+
+        }
+
+        .user {
+            margin-left: 15%;
+        }
+    }
+
+    main {
+        background: $background-primary-color;
+        width: calc(100% - $asideWidth);
+        position: relative;
+
+        .category {
+            text-align: center;
+            font-size: 24px;
+            height: 10%;
+            display: grid;
+            place-items: center;
+            padding: 12px 0;
+        }
+
+        .container {
+            display: flex;
+
+
+            flex-direction: column;
+            justify-content: space-between;
+            height: 85%;
+            padding: 0 30px;
+
+            .total {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                overflow-y: auto;
+
+                li {
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    padding: 6px;
+                    background-color: $background-secondary-color;
+                    border-radius: 8px;
+
+                    min-height: 51px;
+
+                    img {
+                        border-radius: 8px;
+                    }
+
+                    .delete {
+                        display: grid;
+                        place-items: center;
+                        font-size: 1.3rem;
+                    }
+
+                }
+
+            }
+
+            .itemButtons {
+                display: flex;
+                margin-left: auto;
+                font-size: 1.7rem;
+
+                .plus {
+                    background: transparent;
+                }
+
+                .minus {
+                    background: transparent;
+                }
+
+                .delete {
+                    background: transparent;
+                    padding: 10px 16px;
+                }
+            }
+
+            .itemButtons>div {
+                padding: 10px 4px;
+                background-color: $background-primary-color;
+                cursor: pointer;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-evenly;
+                cursor: pointer;
+                margin: 18px 0;
+            }
+
+            .buttons>a {
+                min-width: 60px;
+                display: grid;
+                place-items: center;
+                font-size: 0.9rem;
+
+                background-color: $background-secondary-color;
+                border-radius: 8px;
+                padding: 10px 14px;
+            }
+
+            .buttons>a>div {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+
+            .buy {
+                min-width: 50px;
+                display: grid;
+                place-items: center;
+                font-size: 0.9rem;
+
+                background-color: $background-secondary-color;
+                border-radius: 8px;
+                padding: 10px 14px;
+            }
+
+            .clear {
+                min-width: 50px;
+                display: grid;
+                place-items: center;
+                font-size: 0.9rem;
+
+                background-color: $background-secondary-color;
+                border-radius: 8px;
+                padding: 10px 14px;
+            }
+
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 548px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &:last-child {
+            margin-bottom: 14px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 848px) {
+    main {
+        background: $background-primary-color;
+        width: 100%;
+        position: relative;
+        margin-top: 28px;
+
+        .category {
+            text-align: center;
+            font-size: 24px;
+            height: 10%;
+            display: grid;
+            place-items: center;
+            padding: 12px 0;
+        }
+
+        .container {
+            display: flex;
+
+            flex-direction: column;
+            justify-content: space-between;
+            height: 85%;
+            padding: 0 30px;
+
+            .total {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                overflow-y: auto;
+                height: 400px;
+
+                li {
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    padding: 6px;
+                    background-color: $background-secondary-color;
+                    border-radius: 8px;
+
+                    min-height: 51px;
+
+                    img {
+                        border-radius: 8px;
+                    }
+
+                    .delete {
+                        display: grid;
+                        place-items: center;
+                        font-size: 1.3rem;
+                    }
+
+                }
+
+            }
+
+            .itemButtons {
+                display: flex;
+                margin-left: auto;
+                font-size: 1.7rem;
+
+                .plus {
+                    background: transparent;
+                }
+
+                .minus {
+                    background: transparent;
+                }
+
+                .delete {
+                    background: transparent;
+                    padding: 10px 16px;
+                }
+            }
+
+            .itemButtons>div {
+                padding: 10px 4px;
+                background-color: $background-primary-color;
+                cursor: pointer;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-evenly;
+                cursor: pointer;
+                margin: 18px 0;
+            }
+
+            .buttons>a {
+                min-width: 60px;
+                display: grid;
+                place-items: center;
+                font-size: 0.9rem;
+
+                background-color: $background-secondary-color;
+                border-radius: 8px;
+                padding: 10px 14px;
+            }
+
+            .buttons>a>div {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+
+            .buy {
+                min-width: 50px;
+                display: grid;
+                place-items: center;
+                font-size: 0.9rem;
+
+                background-color: $background-secondary-color;
+                border-radius: 8px;
+                padding: 10px 14px;
+            }
+
+            .clear {
+                min-width: 50px;
+                display: grid;
+                place-items: center;
+                font-size: 0.9rem;
+
+                background-color: $background-secondary-color;
+                border-radius: 8px;
+                padding: 10px 14px;
+            }
+
+        }
+
+    }
+}

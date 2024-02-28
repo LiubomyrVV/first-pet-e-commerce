@@ -1,0 +1,147 @@
+@import '../../styles/variables.scss';
+
+.logo {
+    display: grid;
+    place-items: center;
+
+    font-size: 20px;
+}
+
+.login {
+    display: flex;
+
+    align-items: center;
+
+    margin-left: 12%;
+
+    .icon {
+        border-radius: 28px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .username {
+        margin-left: 10px;
+    }
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.searchContainer {
+    position: relative;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 10% 0 20%;
+
+
+    .icon {
+        position: absolute;
+        right: 8px;
+        top: 7px;
+
+        font-size: 12px;
+    }
+
+    input {
+        padding: 4px 8px;
+        transition: border-color 0.3s;
+        border-radius: 4px;
+        width: 250px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $purple-color;
+
+        }
+    }
+
+    .searched {
+        box-sizing: border-box;
+        position: absolute;
+        padding: 6px;
+        background-color: $background-primary-color;
+        border-radius: $borderRadius-primary;
+        bottom: -50px;
+        height: 52px;
+        width: 95%;
+        overflow: auto;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        transition: 4s;
+        a {
+            &:hover {
+                color: gold;
+            }
+        }
+    }
+
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 14px;
+
+    margin-left: auto;
+}
+
+.store {
+    position: relative;
+}
+
+.storeCount {
+    position: absolute;
+    right: -5px;
+    bottom: -9px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: darkorchid;
+    text-align: center;
+    font-size: 0.7em;
+    display: grid;
+    place-content: center;
+}
+
+@media only screen and (max-width: 844px) {}
+
+@media only screen and (max-width: 805px) {
+    .login {
+        margin: 0 45% 0 15%
+    }
+
+    .options {
+        position: absolute;
+        top: 22px;
+        left: 36px;
+        display: flex;
+        justify-content: space-between;
+        transition: .4s;
+    }
+
+    .options a {
+        left: 40px;
+        width: fit-content;
+        transform: scale(1.7);
+        height: max-content;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+    .login {
+        margin: 0 35% 0 15%
+    }
+
+}
